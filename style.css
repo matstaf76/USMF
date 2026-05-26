@@ -1,0 +1,194 @@
+/* ==========================================================================
+   1. Reset & Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #f8f9fa;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. Header & Branding (Mobile-First)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    padding: 2.5rem 1.5rem; /* Slightly tighter padding for mobile screens */
+    text-align: center;
+}
+
+.seal {
+    width: 100%;
+    max-width: 150px; /* Scaled down slightly for mobile layout */
+    margin: 0 auto 1.5rem;
+    display: block;
+    height: auto;
+}
+
+h1 {
+    font-size: 1.8rem; /* Scaled down for mobile text wrapping */
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+    opacity: 0.95;
+}
+
+/* ==========================================================================
+   3. Navigation (Mobile-First Stacked Layout)
+   ========================================================================== */
+nav {
+    background: #1e3a5f;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column; /* Stacked links on mobile for easier tapping */
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0; /* Clear touch targets */
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover, 
+nav a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. Main Content & Layout
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem; /* Comfortable padding for small viewports */
+}
+
+h2 {
+    color: #1e3a5f;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Call to Action Button */
+.cta {
+    background: #d4af37;
+    color: #1e3a5f;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: block; /* Full width button on mobile for better mobile UX */
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.cta:hover,
+.cta:focus {
+    background: #c19b2b;
+}
+
+/* ==========================================================================
+   5. Footer
+   ========================================================================== */
+footer {
+    background: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================================
+   6. Responsive Tablet & Desktop Adjustments (Media Query)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 3rem 2rem;
+    }
+
+    .seal {
+        max-width: 200px;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    /* Convert navigation to an inline row layout */
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    nav a {
+        width: auto;
+        margin: 0 1.5rem;
+        padding: 0;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+        background-color: transparent;
+    }
+
+    .container {
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* Return button to inline block on larger screens */
+    .cta {
+        display: inline-block;
+    }
+}
